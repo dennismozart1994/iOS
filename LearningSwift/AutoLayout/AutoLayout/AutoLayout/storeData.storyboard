@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y73-LI-p0g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Minhas Anotações-->
+        <scene sceneID="CFb-8d-BK9">
+            <objects>
+                <viewController id="nXd-YI-XZM" customClass="storeDataViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="taR-pr-Tui">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-gP-aDY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="OYa-Az-oSy">
+                                <rect key="frame" x="27" y="89" width="321" height="357"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QfT-Wf-aNi">
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="310"/>
+                                        <color key="backgroundColor" red="0.8862745098" green="0.87450980389999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wki-O1-YJO">
+                                        <rect key="frame" x="0.0" y="319" width="321" height="38"/>
+                                        <state key="normal" image="botao_salvar"/>
+                                        <connections>
+                                            <action selector="saveBtn:" destination="nXd-YI-XZM" eventType="touchUpInside" id="UdW-iL-0Sl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qvm-VC-hcU" firstAttribute="trailing" secondItem="OYa-Az-oSy" secondAttribute="trailing" constant="27" id="ApQ-BR-msA"/>
+                            <constraint firstItem="OYa-Az-oSy" firstAttribute="top" secondItem="qvm-VC-hcU" secondAttribute="top" constant="25" id="Bjk-wG-Sj9"/>
+                            <constraint firstItem="Dpb-gP-aDY" firstAttribute="trailing" secondItem="qvm-VC-hcU" secondAttribute="trailing" id="TF3-iN-z3r"/>
+                            <constraint firstItem="qvm-VC-hcU" firstAttribute="bottom" secondItem="OYa-Az-oSy" secondAttribute="bottom" constant="221" id="aHp-qK-8EL"/>
+                            <constraint firstItem="Dpb-gP-aDY" firstAttribute="leading" secondItem="qvm-VC-hcU" secondAttribute="leading" id="aQo-cw-BBm"/>
+                            <constraint firstItem="Dpb-gP-aDY" firstAttribute="top" secondItem="taR-pr-Tui" secondAttribute="top" id="dhM-mm-PSE"/>
+                            <constraint firstItem="Dpb-gP-aDY" firstAttribute="bottom" secondItem="qvm-VC-hcU" secondAttribute="bottom" id="qEf-2I-JHr"/>
+                            <constraint firstItem="OYa-Az-oSy" firstAttribute="leading" secondItem="qvm-VC-hcU" secondAttribute="leading" constant="27" id="rjF-xn-T1c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qvm-VC-hcU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Minhas Anotações" id="3bd-Gy-817"/>
+                    <connections>
+                        <outlet property="notationsText" destination="QfT-Wf-aNi" id="6QM-Nn-gg3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuK-B7-3IX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.79999999999995" y="52.623688155922046"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wXL-7I-2xs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y73-LI-p0g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tmY-Ev-C1D">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.25490196078431371" green="0.20392156862745098" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.88627450980392153" green="0.87058823529411766" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nXd-YI-XZM" kind="relationship" relationship="rootViewController" id="NLY-GC-EMW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAK-dO-hzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-187.5" y="53.87323943661972"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_salvar" width="321" height="38"/>
+        <image name="fundo" width="768" height="462"/>
+    </resources>
+</document>
